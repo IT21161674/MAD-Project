@@ -15,17 +15,18 @@ import com.google.firebase.database.FirebaseDatabase
 
 class TipDetailsActivityUser : AppCompatActivity() {
 
+    //defining variables
     private lateinit var tvTipId: TextView
     private lateinit var tvTipName: TextView
     private lateinit var tvTipDescription: TextView
     private lateinit var btnUpdate: Button
     private lateinit var btnDelete: Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tip_details_user)
 
+        //calling initView and setValuesToViews functions
         initView()
         setValuesToViews()
 
@@ -44,6 +45,7 @@ class TipDetailsActivityUser : AppCompatActivity() {
 
     }
 
+    //deleteRecord function
     private fun deleteRecord(id: String) {
         val dbRef= FirebaseDatabase.getInstance().getReference("Tips").child(id)
         val tTask = dbRef.removeValue()
@@ -59,12 +61,14 @@ class TipDetailsActivityUser : AppCompatActivity() {
 
     }
 
+    //setValuesToViews function
     private fun setValuesToViews() {
 //        tvTipId.text=intent.getStringExtra("tipId")
         tvTipName.text=intent.getStringExtra("tipName")
         tvTipDescription.text=intent.getStringExtra("tipDescription")
     }
 
+    //initView function
     private fun initView() {
 
 //        tvTipId = findViewById(R.id.tvTipId)
@@ -75,41 +79,8 @@ class TipDetailsActivityUser : AppCompatActivity() {
 //        btnDelete = findViewById(R.id.btnDelete)
 
     }
-    private fun openUpdateDialog(tipId: String, tipName: String) {
-        val tDialog =  AlertDialog.Builder(this)
-        val inflater = layoutInflater
-        val pDialogView= inflater.inflate(R.layout.update_tip,null)
 
-        tDialog.setView(pDialogView)
-
-        val edtTipName = pDialogView.findViewById<EditText>(R.id.updateTipName)
-        val edtTipDescription = pDialogView.findViewById<EditText>(R.id.updateTipDescription)
-        val btnUpdate = pDialogView.findViewById<Button>(R.id.btnUpdateData)
-
-        edtTipName.setText(intent.getStringExtra("tipName").toString())
-        edtTipDescription.setText(intent.getStringExtra("tipDescription").toString())
-
-        tDialog.setTitle("Updating $tipName Record")
-
-        val alertDialog= tDialog.create()
-        alertDialog.show()
-
-        btnUpdate.setOnClickListener {
-            updateTipData (
-                tipId,
-                edtTipName.text.toString(),
-                edtTipDescription.text.toString()
-            )
-
-            Toast.makeText(applicationContext,"Tip Updated", Toast.LENGTH_LONG).show()
-
-            //setting updated data to our textviews
-            tvTipName.text= edtTipName.text.toString()
-            tvTipDescription.text= edtTipDescription.text.toString()
-
-            alertDialog.dismiss()
-        }
-    }
+    //updateTipData function
     private fun updateTipData (
         id:String,
         name:String,
