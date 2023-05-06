@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">energy saving tips app</string>
+    <string name="energySavingTips">Energy Saving Tips</string>
+    <string name="addTips">Add Tips</string>
+    <string name="fetchTips">All Tips</string>
+    <string name="insertTip">Insert Tip</string>
+    <string name="tipName">Tip Name</string>
+    <string name="enterTipName">Enter Tip Name</string>
+    <string name="tipDescription">Tip Description</string>
+    <string name="enterTipDescription">Enter Tip Description</string>
+    <string name="saveTip">Save Tip</string>
+    <string name="tipId">Tip ID</string>
+    <string name="TipName">Tip Name</string>
+    <string name="TipDescription">Tip Description</string>
+    <string name="CalcElectricBill">Calculate Electricity Bill</string>
+    <string name="numOfUnits">Number of electric units used :</string>
+    <string name="numOfUnitsHint">Num of units used</string>
+    <string name="btnCalculateBill">Calculate</string>
+    <string name="billAmountLbl">Bill amount</string>
+
+</resources>

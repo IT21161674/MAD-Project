@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "394826067510",
+    "project_id": "energy-saving-tips-305c9",
+    "storage_bucket": "energy-saving-tips-305c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394826067510:android:6573558ac96fccb74ff297",
+        "android_client_info": {
+          "package_name": "com.example.energysavingtipsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394826067510-d7u21u7tq1meub1ol08cr6r0k013tkhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAZYs0WSmMS9Cae0C3_yRLsqc3CycAsVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394826067510-d7u21u7tq1meub1ol08cr6r0k013tkhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

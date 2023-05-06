@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InsertionActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/insertTip"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="44sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/tipName"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/enterTipName"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/enterTipName"
+        android:layout_width="204dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="45dp"
+        android:ems="10"
+        android:hint="@string/enterTipName"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/tipDescription"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/enterTipDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/enterTipDescription"
+        android:layout_width="201dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:ems="10"
+        android:hint="@string/enterTipDescription"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterTipName" />
+
+    <Button
+        android:id="@+id/btnSaveTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/saveTip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterTipDescription" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="248dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveTip"
+        app:srcCompat="@drawable/tip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
