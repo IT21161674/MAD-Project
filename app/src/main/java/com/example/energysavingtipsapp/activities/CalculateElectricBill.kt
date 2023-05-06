@@ -10,6 +10,7 @@ import com.example.energysavingtipsapp.R
 
 class CalculateElectricBill : AppCompatActivity() {
 
+    //defining variables
     private lateinit var etUnitsUsed:EditText
     private lateinit var tvBillAmount: TextView
 
@@ -30,12 +31,14 @@ class CalculateElectricBill : AppCompatActivity() {
             }
 
             override fun afterTextChanged(p0: Editable?) {
+                //calling computeBillAmount function
                 computeBillAmount()
             }
 
         })
     }
 
+    //computeBillAmount function
     private fun computeBillAmount() {
 
         if(etUnitsUsed.text.isEmpty()){

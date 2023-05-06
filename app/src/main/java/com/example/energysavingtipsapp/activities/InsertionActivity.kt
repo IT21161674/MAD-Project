@@ -11,6 +11,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class InsertionActivity : AppCompatActivity(){
+
+    //defining variables
     private lateinit var enterTipName: EditText
     private lateinit var enterTipDescription: EditText
     private lateinit var btnSaveTip: Button
@@ -28,9 +30,12 @@ class InsertionActivity : AppCompatActivity(){
         dbRef = FirebaseDatabase.getInstance().getReference("Tips")
 
         btnSaveTip.setOnClickListener{
+            //calling saveTipData function
             saveTipData()
         }
     }
+
+    //saveTipData function
     private fun saveTipData(){
         var tipName = enterTipName.text.toString()
         var tipDescription = enterTipDescription.text.toString()

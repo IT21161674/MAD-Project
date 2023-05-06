@@ -9,6 +9,7 @@ import com.example.energysavingtipsapp.R
 
 class EConsumptionCalculator : AppCompatActivity() {
 
+    //defining variables
     private lateinit var etWattage: EditText
     private lateinit var etHours: EditText
     private lateinit var etCostPerKwh: EditText
@@ -30,6 +31,7 @@ class EConsumptionCalculator : AppCompatActivity() {
             val hours = etHours.text.toString().toDoubleOrNull() ?: 0.0
             val costPerKwh = etCostPerKwh.text.toString().toDoubleOrNull() ?: 0.0
 
+            //calculating energy cost
             val energyCost = wattage * hours * (costPerKwh * 100)/ 1000
             tvResult.text = "Energy cost: Rs " + String.format("%.2f", energyCost)
         }

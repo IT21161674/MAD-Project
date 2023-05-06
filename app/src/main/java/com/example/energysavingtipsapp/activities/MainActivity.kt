@@ -10,6 +10,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
 
+    //defining variables
     private lateinit var btnInsertData : Button
     private lateinit var btnFetchData : Button
 

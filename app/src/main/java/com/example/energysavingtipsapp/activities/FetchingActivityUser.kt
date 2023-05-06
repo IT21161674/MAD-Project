@@ -14,6 +14,7 @@ import com.google.firebase.database.*
 
 class FetchingActivityUser : AppCompatActivity() {
 
+    //defining variables
     private lateinit var tipRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
     private lateinit var tipList: ArrayList<TipModel>
@@ -30,9 +31,11 @@ class FetchingActivityUser : AppCompatActivity() {
 
         tipList = arrayListOf<TipModel>()
 
+        //calling getTipData function
         getTipData()
     }
 
+    //getTipData function
     private fun getTipData(){
         tipRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
